@@ -64,7 +64,11 @@ procedureSection:
       - |
         Select the drop-down menu for **Disk name** and select a disk from the list of available managed disks.
       - |
-        Select **Save** to attach the existing managed disk and update the VM configuration:
+        Select **Save** to attach the existing managed disk and update the VM configuration.  
+
+      > [!NOTE]
+      > If the existing data disk is encrypted with Customer Manged Key(CMK), and the VM is either not encrypted or is encrypted with a different encryption key(CMK or PMK), the attach disk operation may fail with error "(PropertyChangeNotAllowed) Changing property 'customData' is not allowed."  
+
 
   - title: |
       Connect to the Linux VM to mount the new disk
